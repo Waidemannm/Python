@@ -1,0 +1,45 @@
+'''
+Escreva uma Programa em python que, para uma quantidae de alunos especificada, colete as notas de cada aluno e exiba um resumo da turma
+
+O programa deve ter (Requisitos):
+- Função coletar_notas(): Pedir ao usuario para digitar uma serie de notas em uma unica linha (.split()). O programa deve converter as notas para numerico (float), e retorna-las em uma lista
+- Função preencher_turma(qtd_alunos): Recebe por parametro a quantidade de alunos e para cada aluno utiliza a função coletar_notas para preencher uma lista de notas de cada aluno
+- Função calcular_media(notas_aluno): Recebe pro parametro a lista de noas de um aluno de um aluno e retorna 
+- Função resumo_turma(turma): Percorre a lista de alunos, para cada aluno exibir as notas e media, formatando a media para duas casas decimais
+'''
+
+def coletar_notas():     
+    notas = input().split()
+    for i in range(len(notas)):
+        notas[i] = float(notas[i]) #casting para float
+    return notas
+
+def preencher_turma(qtd_alunos):
+    turma = []
+    for i in range(qtd_alunos):
+        print(f'Nota {i + 1}º aluno ', end=' ')
+        aluno = coletar_notas()
+        turma.append(aluno)
+    return turma
+
+def calcular_media(notas_aluno):
+    soma = 0
+    for nota in notas_aluno:
+        soma += nota 
+    return soma/len(notas_aluno)
+
+def resumo_turma(turma):
+    nr_aluno = 1
+    for notas_aluno in turma:
+        media = calcular_media(notas_aluno)
+        print(f'\n{nr_aluno}º Aluno Média: {media:.2f} Nota: {notas_aluno} \n')
+        nr_aluno+=1
+
+def main():
+    qtd_alunos = int(input("Digite a quantidade de alunos: "))
+    turma = preencher_turma(qtd_alunos)
+    resumo_turma(turma)
+    
+#principal
+main()
+            

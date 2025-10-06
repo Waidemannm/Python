@@ -1,0 +1,20 @@
+CP04 Python 1TDSPH
+Gabriel Sbrana, rm565849
+Thiago Rodrigues da Mota, rm563650
+Moisés Waidemann, rm563719
+
+Caça ao Tesouro
+Regras:
+    - O tabuleiro é uma matriz 10x10 (com posições de 0 a 9);
+    - Tesouros (T) e Armadilhas (A) são escondidos aleatoriamente nas posições (0 a 9, 0 a 9);
+    - Os jogadores começam juntos na posição inicial (0, 0);
+    - Cada jogador tem 10 pontos no início;
+    - Em cada rodada, o jogador sorteado rola dois dados:
+        - O primeiro define a linha (0 a 9);
+        - O segundo define a coluna (0 a 9);
+        - A posição sorteada define para onde o jogador se move;
+    - Regras de pontuação:
+        - Ao cair em um Tesouro (T): ganha +10 pontos;
+        - Ao cair em uma Armadilha (A): perde -5 pontos;
+    - São 20 rodadas no total (10 jogadas para cada jogador);
+    - Ao final das rodadas, vence quem tiver a maior pontuação.
