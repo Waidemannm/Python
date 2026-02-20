@@ -1,4 +1,4 @@
-# 🐍 Projeto Python – [Nome do Projeto]
+# 🐍 Projeto Python 
 
 ## 📌 Disciplina
 Python – FIAP
